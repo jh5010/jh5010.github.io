@@ -135,6 +135,57 @@
     &#8594; Repository Settings > Pages > 중간에 있는 주소(username.github.io) 접속<br>
     &#8594; 이전에 입력한 HTML 문서가 잘 뜨면 성공<br>
   
+## ✏️ Build Jekyll Project
+  &#8594; Local Repository에서 Jeykll 시작 후, 원격 저장소에 이를 반영하기
+  - Jekyll 설치
+  ```
+  jekyll -v
+  ```
+  &#8594; Jekyll이 설치되어있는지 확인
+  - Jekyll 시작하기
+  ```
+  jekyll new . --force
+  ```
+   &#8594; 현재 디렉토리(.).에 Jekyll 설치
+  ```
+  bundle exec jekyll serve
+  ```
+  &#8594; (bundle exec) jekyll serve 실행 후, localhost:4000 접속
+  &#8594; 기본 테마의 Jekyll 사이트가 생성됨을 확인
+  - _config.yml
+  대부분의 블로그 속성을 관리하는 파일<br>
+  원하는 대로 수정한 후 (bundle exec) jekyll serve를 실행
+  - commit 남기기
+  ```
+  git rm index.html
+  git add *
+  ```
+  &#8594; git rm/git add를 통해 변경사항을 반영할 파일들 지정
+  ```
+  git commit -m "add: jekyll on repository"
+  ```
+  &#8594; 반영할 파일들을 commit으로 저장
+  - push로 업로드하기
+  ```
+  git push origin main
+  clear
+  ```
+  &#8594; git push를 통해 로컬 저장소의 commit정보를 원격 저장소에 
+  
+
+## 📚 Add Theme on Blog
+  - Build Jekyll Project
+  - Upload Post
+  - Add Theme on Blog<br>
+  [jekyll Themes](http://jekyllthemes.org/) 사이트를 통해서 [Yet Another Them(YAT)](http://jekyllthemes.org/themes/jekyll-theme-yat/) 이라는 테마를 이용했다.
+  1. 원하는 테마를 git clone해서 로컬에 받아오기
+  2. _posts를 제외하고 테마를 덮어쓰기
+  3. 변경된 파일들을 git에 반영하기 (git add, git rm)
+  
+  더 쉬운 방법: 나의 원격 저장소로 원하는 테마의 원격 저장소로 fork한 후,
+  해당 저장소의 이름을 <username>.github.io로 변경 후,
+  git clone을 통해 받아온 후, 작업 계속하기
+  
 There are three ways to install:
 
 - As a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes).
@@ -199,36 +250,6 @@ GitHub Pages runs in `safe` mode and only allows [a set of whitelisted plugins/t
 To use the third-party gem in GitHub Pages without limitation:
 
 Here is a GitHub Action named [jekyll-deploy-action](https://github.com/jeffreytse/jekyll-deploy-action) for Jekyll site deployment conveniently. 👍
-  
-## ✏️ Build Jekyll Project
-  &#8594 Local Repository에서 Jeykll 시작 후, 원격 저장소에 이를 반영하기
-  - Requisite
-  ```
-  jekyll -v
-  ```
-  &#8594 Jekyll이 설치되어있는지 확인
-  - Start Jekyll
-  ```
-  jekyll new . --force
-  ```
-   &#8594 현재 디렉토리(.).에 Jekyll 설치
-  ```
-  bundle exec jekyll serve
-  ```
-  &#8594 (bundle exec) jekyll serve 실행 후, localhost:4000 접속
-
-## 📚 Add Theme on Blog
-  - Build Jekyll Project
-  - Upload Post
-  - Add Theme on Blog<br>
-  [jekyll Themes](http://jekyllthemes.org/) 사이트를 통해서 [Yet Another Them(YAT)](http://jekyllthemes.org/themes/jekyll-theme-yat/) 이라는 테마를 이용했다.
-  1. 원하는 테마를 git clone해서 로컬에 받아오기
-  2. _posts를 제외하고 테마를 덮어쓰기
-  3. 변경된 파일들을 git에 반영하기 (git add, git rm)
-  
-  더 쉬운 방법: 나의 원격 저장소로 원하는 테마의 원격 저장소로 fork한 후,
-  해당 저장소의 이름을 <username>.github.io로 변경 후,
-  git clone을 통해 받아온 후, 작업 계속하기
   
 
 ## ✏️  Development
