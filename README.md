@@ -1,24 +1,12 @@
 <div align="center">
   <br>
 
-  <a href="https://github.com/jeffreytse/jekyll-theme-yat">
-    <img alt="jekyll-theme-yat →~ jekyll" src="https://user-images.githubusercontent.com/9413601/106478481-346fdf00-64e4-11eb-9385-1ab5329c3234.png" width="600">
-  </a>
-
-  <h1>🎨 JEKYLL YAT THEME 🎨</h1>
+  <h1>나의 GitBlog </h1>
 
 </div>
 
-<h4 align="center">
-  <a href="https://jekyllrb.com/" target="_blank"><code>Jekyll</code></a> theme for elegant writers.
-</h4>
-
 <p align="center">
-  <a href="https://jeffreytse.github.io/jekyll-theme-yat">
-    <img src="https://github.com/jeffreytse/jekyll-theme-yat/workflows/Github%20Pages/badge.svg"
-      alt="Github Pages" />
-  </a>
-
+ 
   <a href="http://badge.fury.io/rb/jekyll-theme-yat">
     <img src="https://badge.fury.io/rb/jekyll-theme-yat.svg"
       alt="Gem Version" />
@@ -45,25 +33,8 @@
   </a>
 </p>
 
-<div align="center">
-  <sub>Built with ❤︎ by
-  <a href="https://jeffreytse.net">jeffreytse</a> and
-  <a href="https://github.com/jeffreytse/jekyll-theme-yat/graphs/contributors">contributors </a>
-</div>
-
 <br>
 
-Hey, nice to meet you, you found this [Jekyll][jekyll] theme. Here the
-**Yet Another Theme** is a modern responsive theme, and it's quiet clear,
-clean and neat for writers and posts. **If you like the theme, give it
-a star!**
-
-
-<p align="center">
-
-  <img src="https://user-images.githubusercontent.com/9413601/91842897-6a840b00-ec87-11ea-95ca-52abcc1ac063.png" alt="demo-screenshot" width="780px"/>
-
-</p>
 
 <h3 align="center">🌌 Night Mode</h3>
 
@@ -73,27 +44,97 @@ a star!**
 
 </p>
 
-## ✨ Features
+## ✨ Git 시작하기
+  
+  - Git 로컬 저장소 생성
+  ```
+  user $ git init
+  ```
+  &#8594; 현재 작업중인 디렉토리를 git 저장소로 지정하기
+  
+  - Git에 변경사항 반영하기
+  ```
+  user $ git status
+  ```
+  &#8594; 현재 Git 상태 확인
+  
+  ```
+  user $ git add example.py
+  ```
+  &#8594;example.py를 생성/수정하고, 이를 Commit에 반영하고 싶은 경우
+  
+  ```
+  user $ git commit -m "add example.py"
+  ```
+  &#8594; 변경사항이 반영된 new commit 생성
+  
+  ```
+  user $ git log
+  ```
+  &#8594; commit 기록 확인하기 (Author, Commitor, Date, ...)
+  
+  - Git Branch 생성
+  ```
+  user $ git branch <branch_name>
+  ```
+  &#8594; git branch를 생성
+  
+  ```
+  user $ git checkout <branch_name>
+  ```
+  &#8594; 현재 작업중인 branch를 전환
+  
+  ```
+  user $ git merge <branch_name>
+  ```
+  &#8594; 현재 작업중인 branch를 원하는 branch에 병합
+  
+  ```
+  user $ git branch -d <branch_name>
+  ```
+  &#8594; branch를 삭제
 
-- Support beautiful __Night Mode__.
-- Modern responsive web design.
-- Full layouts `home`, `post`, `tags`, `archive` and `about`.
-- Uses font awesome 5 for icons.
-- Beautiful Syntax Highlight using [highlight.js][highlight-js].
-- RSS support using [Jekyll Feed][jekyll-feed] gem.
-- Optimized for search engines using [Jekyll Seo Tag][jekyll-seo-tag] gem.
-- Sitemap support using [Jekyll Sitemap][jekyll-sitemap] gem.
-- Complex and flexible table support using [Jekyll Spaceship][jekyll-spaceship] gem.
-- MathJAX and LaTeX optional support using [Jekyll Spaceship][jekyll-spaceship] gem.
-- Media (Youtube, Spotify, etc.) support using [Jekyll Spaceship][jekyll-spaceship] gem.
-- Diagram (PlantUML, Mermaid) support using [Jekyll Spaceship][jekyll-spaceship] gem.
-- Google Translation support.
-- New post tag support.
-
-Also, visit the [Live Demo][yat-live-demo] site for the theme.
-
-## 🛠️  Installation
-
+## 🛠️  Github Repo를 Webpage로 만들기
+  - Github Page 시작하기
+  1. Repository 생성<br>
+    Github에서 <username>.github.io 이름의 Repo 생성<br>
+  2. Local-Remote Repository 연동<br>
+    생성한 Repo에서 Remote Repository의 주소 복사<br>
+    ```
+    git clone <repo_name> <path>
+    ```<br>
+    &#8594; git clone으로 클론하기<br>
+  3.예시 문서 작성<br>
+    예시 파일(index.html) 작성<br>
+  4. git commit 남기기<br>
+    ```
+    git status
+    git add
+    ```<br>
+    &#8594; git status로 현재 상태 확인 후 git add로 변경파일 추가<br>
+    ```
+    git commit -m "msg"
+    ```<br>
+    &#8594; 커밋 남기기<br>
+  5. git push로 원격 저장소에 반영하기<br>
+    ```
+    git branch -M main
+    ```<br>
+    &#8594; 현재 branch의 이름을 main으로 변경<br>
+    ```
+    git status
+    git add index.html
+    ```<br>
+    &#8594; git status로 현재 상태 확인 후 git add로 변경파일 추가<br>
+    ```
+    git push origin main
+    ```<br>
+    &#8594; git push를 통해 원격저장소에 반영<br>
+    &#8594; Password에 PAT(Personal Access Token)을 입력하여 git push하기<br>
+  6. Github Page 설정 확인<br>
+    &#8594; Repository Settings > Pages > 중간에 있는 주소(username.github.io) 접속<br>
+    &#8594; 이전에 입력한 HTML 문서가 잘 뜨면 성공<br>
+  
 There are three ways to install:
 
 - As a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes).
@@ -160,9 +201,19 @@ To use the third-party gem in GitHub Pages without limitation:
 Here is a GitHub Action named [jekyll-deploy-action](https://github.com/jeffreytse/jekyll-deploy-action) for Jekyll site deployment conveniently. 👍
 
 
-## 📚 Usage
-
-Add or update your available layouts, includes, sass and/or assets.
+## 📚 Add Theme on Blog
+  - Build Jekyll Project
+  - Upload Post
+  - Add Theme on Blog<br>
+  [jekyll Themes](http://jekyllthemes.org/) 사이트를 통해서 [Yet Another Them(YAT)](http://jekyllthemes.org/themes/jekyll-theme-yat/) 이라는 테마를 이용했다.
+  1. 원하는 테마를 git clone해서 로컬에 받아오기
+  2. _posts를 제외하고 테마를 덮어쓰기
+  3. 변경된 파일들을 git에 반영하기 (git add, git rm)
+  
+  더 쉬운 방법: 나의 원격 저장소로 원하는 테마의 원격 저장소로 fork한 후,
+  해당 저장소의 이름을 <username>.github.io로 변경 후,
+  git clone을 통해 받아온 후, 작업 계속하기
+  
 
 ## ✏️  Development
 
@@ -172,16 +223,22 @@ Your theme is setup just like a normal Jekyll site! To test your theme, run `bun
 
 When your theme is released, only the files in `_data`, `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-yat.gemspec` accordingly.
+  
+- Support beautiful __Night Mode__.
+- Modern responsive web design.
+- Full layouts `home`, `post`, `tags`, `archive` and `about`.
+- Uses font awesome 5 for icons.
+- Beautiful Syntax Highlight using [highlight.js][highlight-js].
+- RSS support using [Jekyll Feed][jekyll-feed] gem.
+- Optimized for search engines using [Jekyll Seo Tag][jekyll-seo-tag] gem.
+- Sitemap support using [Jekyll Sitemap][jekyll-sitemap] gem.
+- Complex and flexible table support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- MathJAX and LaTeX optional support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- Media (Youtube, Spotify, etc.) support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- Diagram (PlantUML, Mermaid) support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- Google Translation support.
+- New post tag support.
 
-## 🔫 Contributing
-
-Issues and Pull Requests are greatly appreciated. If you've never contributed to an open source project before I'm more than happy to walk you through how to create a pull request.
-
-You can start by [opening an issue](https://github.com/jeffreytse/jekyll-theme-yat/issues/new) describing the problem that you're looking to resolve and we'll go from there.
-
-## 🌈 License
-
-This theme is licensed under the [MIT license](https://opensource.org/licenses/mit-license.php) © JeffreyTse.
 
 <!-- External links -->
 [jekyll]: https://jekyllrb.com/

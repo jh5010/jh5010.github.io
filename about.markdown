@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: framework
 title: About
 permalink: /about/
 ---
