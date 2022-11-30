@@ -199,7 +199,23 @@ GitHub Pages runs in `safe` mode and only allows [a set of whitelisted plugins/t
 To use the third-party gem in GitHub Pages without limitation:
 
 Here is a GitHub Action named [jekyll-deploy-action](https://github.com/jeffreytse/jekyll-deploy-action) for Jekyll site deployment conveniently. 👍
-
+  
+## ✏️ Build Jekyll Project
+  &#8594 Local Repository에서 Jeykll 시작 후, 원격 저장소에 이를 반영하기
+  - Requisite
+  ```
+  jekyll -v
+  ```
+  &#8594 Jekyll이 설치되어있는지 확인
+  - Start Jekyll
+  ```
+  jekyll new . --force
+  ```
+   &#8594 현재 디렉토리(.).에 Jekyll 설치
+  ```
+  bundle exec jekyll serve
+  ```
+  &#8594 (bundle exec) jekyll serve 실행 후, localhost:4000 접속
 
 ## 📚 Add Theme on Blog
   - Build Jekyll Project
